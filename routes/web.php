@@ -11,8 +11,8 @@ Route::post('/mensaje', [MensajeController::class, 'store'])->name('mensaje.stor
 
 // Mostrar muro de mensajes
 Route::get('/muro', [MensajeController::class, 'index'])
-    ->middleware('auth')->name('mensaje.index');
-
+    ->middleware('auth')    // Protege la ruta para usuarios autenticados
+    ->name('mensaje.index');
 
 Route::middleware([
     'auth:sanctum',
