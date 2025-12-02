@@ -320,6 +320,11 @@ return [
            'url' => 'admin/dashboard',
            'icon' => 'fas fa-fw fa-home',
        ],
+       [
+           'text' => 'Crear Usuario',
+           'url' => 'admin/users/create',
+           'icon' => 'fas fa-fw fa-user-plus',
+       ],
 
         [
             'text' => 'blog',
