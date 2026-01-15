@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MensajeController;
+use App\Http\Controllers\StudentController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,6 +31,10 @@ Route::middleware(['auth'
 
    Route::post('/admin/users/store', [App\Http\Controllers\Admin\UserController::class, 'store']
    )->name('admin.users.store');
+
+   // Ruta que almacena todos los métodos CRUD
+   // Métodos cómo: index, create, store, show, edit, update, destroy
+   Route::resource('/student', StudentController::class);
 });
 
 // Rutas generadas por Jetstream para autenticación y dashboard
